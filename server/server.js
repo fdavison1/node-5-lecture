@@ -17,6 +17,7 @@ app.use(session({
 
 //ENDPOINTS
 app.post('/auth/register', c.register)
+app.post('/auth/login', c.login)
 
 //LISTENING
 massive(CONNECTION_STRING).then(db => {
