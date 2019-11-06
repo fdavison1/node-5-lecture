@@ -47,5 +47,11 @@ module.exports = {
             res.status(200).send({message: 'Passwork incorrect'})
         }
         //6. add user to session
+    }, 
+    logout: (req, res) => {
+        req.session.destroy()
+        res.status(200).send({
+            message: 'logged out'
+        })
     }
 }

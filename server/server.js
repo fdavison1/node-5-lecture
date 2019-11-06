@@ -18,6 +18,7 @@ app.use(session({
 //ENDPOINTS
 app.post('/auth/register', c.register)
 app.post('/auth/login', c.login)
+app.delete('/auth/logout', c.logout)
 
 //LISTENING
 massive(CONNECTION_STRING).then(db => {

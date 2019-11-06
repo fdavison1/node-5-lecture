@@ -33,7 +33,7 @@ class App extends React.Component {
   }
 
   async logout() {
-    await axios.get('/auth/logout')
+    await axios.delete('/auth/logout')
     this.setState({ user: {} })
   }
 
