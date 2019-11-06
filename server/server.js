@@ -15,6 +15,10 @@ app.use(session({
     saveUninitialized: false
 }))
 
+//ENDPOINTS
+app.post('/auth/register', c.register)
+
+//LISTENING
 massive(CONNECTION_STRING).then(db => {
     app.set('db', db)
     app.listen(SERVER_PORT, () => console.log(`listening on port ${SERVER_PORT}`))
